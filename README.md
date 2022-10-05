@@ -2,13 +2,17 @@
 
 A Discord bot created for the final challange of DB1 Start.
 
-It`s a translator bot. At first it will always translate every message to Portuguese, using the langdetect module for python.
+It's a translator bot. At first it will always translate every message to Portuguese.
+
+The bot is detecting the language of the massege using the langdetect and the libretranslatepy for the translation it self
 
 
-### pip install discord.py
+To run the code, simply install the following?
 
-### pip install langdetect
+pip install discord.py
 
-### pip install libretranslatepy
+pip install langdetect
 
-### pip install python-decouple
+pip install libretranslatepy
+
+pip install python-decouple
