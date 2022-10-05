@@ -1,0 +1,4 @@
+discord.py
+langdetect
+libretranslatepy
+python-decouple
