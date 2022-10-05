@@ -18,7 +18,7 @@ pip install libretranslatepy
 pip install python-decouple
 
 
-##### In the project folder, create a ".env" file and put the discord token like this:
+### In the project folder, create a ".env" file and put the discord token like this:
 
 
 SECRET=YourTokenHere
