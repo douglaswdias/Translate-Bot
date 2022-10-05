@@ -7,7 +7,7 @@ It's a translator bot. At first it will always translate every message to Portug
 The bot is detecting the language of the massege using the langdetect and the libretranslatepy for the translation it self
 
 
-##### To run the code, simply install the following:
+### To run the code, simply install the following:
 
 pip install discord.py
 
