@@ -4,9 +4,9 @@ from libretranslatepy import LibreTranslateAPI
 from decouple import config
 import os
 
-lt = LibreTranslateAPI("https://translate.argosopentech.com/")
+translate_api = LibreTranslateAPI("https://translate.argosopentech.com/")
 
-languages = [
+supported_languages = [
   "af", "ar", "bg", "bn", "ca", "cs", "cy", "da", "de", "el", "en", "es", "et", "fa", "fi", "fr", "gu", "he","hi", "hr", "hu", "id", "it", "ja", "kn", "ko", "lt", "lv", "mk", "ml", "mr", "ne", "nl", "no", "pa", "pl","pt", "ro", "ru", "sk", "sl", "so", "sq", "sv", "sw", "ta", "te", "th", "tl", "tr", "uk", "ur", "vi"
 ]
 
@@ -28,11 +28,11 @@ async def on_message(message):
   if message.author == client.user:
     return
 
-  user_language = str(detect(user_message))  
+  message_language = str(detect(user_message))  
   
   try:
-    if user_language in languages:
-      translation = lt.translate(user_message, user_language, "pt")
+    if message_language in supported_languages:
+      translation = translate_api.translate(user_message, message_language, "pt")
       await message.channel.send(
         f"🇧🇷 __***Tradução***__ 🇧🇷: {os.linesep}{translation}",
         reference=message)
